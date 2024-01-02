@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Vaziri';
+    src: url('./assets/fonts/Vazirmatn-Regular.ttf');
+}
+body {
+    font-family: 'Vaziri', fallback, sans-serif;
+}
+
+.centered-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.whole-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.user-input,
+.user-output {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-input input,
+.user-output input {
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.ask {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ask:hover {
+    background-color: #0056b3;
+}
