@@ -16,7 +16,7 @@ type Rate = {
 export function Calculator() {
     const [ask, setAsk] = useState<string>("");
     const [selectedCurrency, setSelectedCurrency] = useState<Rate | null>(api.items[0]);
-    const [showDropdown, setShowDropdown] = useState<boolean>(true);
+    const [showDropdown, setShowDropdown] = useState<boolean>(false);
 
     // useEffect(() => {
     //     // Set the initial selected currency to the first item in the API response
@@ -38,7 +38,7 @@ export function Calculator() {
                     <label className="form-label" htmlFor="ask-amount">پرداخت میکنم</label>
                     <div className="user-input">
                         <input defaultValue={ask} onChange={(e) => setAsk(e.target.value)} type="number" id="ask-amount" name="ask-amount" maxLength={18} />
-                        <button className="btn" onClick={() => setShowDropdown(!showDropdown)}>
+                        <button type="button" className="btn" onClick={() => setShowDropdown(!showDropdown)}>
                             <span>{selectedCurrency?.baseLocalizedName}</span>
                         </button>
                         {showDropdown && (
@@ -55,7 +55,7 @@ export function Calculator() {
                         <label className="form-label" htmlFor="you-get">دریافت میکنم</label>
                         <div className="user-output">
                             <input type="text" readOnly defaultValue='' value={selectedCurrency?.lastAvg && !isNaN(parseInt(ask)) ? (parseInt(ask) * selectedCurrency.lastAvg).toFixed(selectedCurrency?.targetPrecision) : ''} maxLength={18} />
-                            <button className="btn">
+                            <button className="btn" type="button">
                                 <span>{selectedCurrency?.targetLocalizedName}</span>
                             </button>
                         </div>
