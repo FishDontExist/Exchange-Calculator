@@ -2,21 +2,26 @@
     font-family: 'Vaziri';
     src: url('./assets/fonts/Vazirmatn-Regular.ttf');
 }
+
 body {
     font-family: 'Vaziri', fallback, sans-serif;
-}
-
-.centered-form {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-
+    min-height: 100vh;
+    margin: 0;
+    
 }
+
+
 
 .container {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .whole-card {
@@ -47,6 +52,12 @@ body {
     border-radius: 5px;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .ask {
     padding: 10px 20px;
     background-color: #007BFF;
@@ -58,4 +69,8 @@ body {
 
 .ask:hover {
     background-color: #0056b3;
+}
+
+.btn {
+    text-size-adjust: auto;
 }
